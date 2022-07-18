@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sedan-color: hsl(31, 77%, 52%);
+  --suv-color: hsl(184, 100%, 22%);
+  --luxury-color: hsl(179, 100%, 13%);
+  --body-bg-color: hsl(0, 0%, 95%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 1.5rem;
+  font-family: "Lexend Deca";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.card {
+  width: 32rem;
+  padding: 4rem;
+  /* height: 40rem; */
+}
+
+.icon {
+  margin-bottom: 3rem;
+}
+
+.card-title {
+  font-size: 3.2rem;
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.card-statement {
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.card--sedan {
+  background-color: var(--sedan-color);
+}
+
+.card--suv {
+  background-color: var(--suv-color);
+}
+
+.card--luxury {
+  background-color: var(--luxury-color);
+}
+
+.cto:link {
+  text-decoration: none;
+  background-color: var(--body-bg-color);
+  padding: 1rem 2.4rem;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.card--sedan .cto:link {
+  color: var(--sedan-color);
+}
+.card--suv .cto:link {
+  color: var(--suv-color);
+}
+.card--luxury .cto:link {
+  color: var(--luxury-color);
+}
+
+.card--luxury .cto:hover,
+.card--sedan .cto:hover,
+.card--suv .cto:hover {
+  box-shadow: inset 0 0 0 2px var(--body-bg-color);
+  color: var(--body-bg-color);
+}
+
+.card--sedan .cto:hover {
+  background-color: var(--sedan-color);
+}
+
+.card--suv .cto:hover {
+  background-color: var(--suv-color);
+}
+
+.card--luxury .cto:hover {
+  background-color: var(--luxury-color);
+}
+
+@media (min-width: 376px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+  }
+
+  .main {
+    flex-direction: row;
+  }
+
+  .card-statement {
+    margin-bottom: 10rem;
+  }
+}
